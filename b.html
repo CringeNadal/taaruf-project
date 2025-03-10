@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nadal - Your Average CP</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #e6f9d8, #f9f9f9);
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            background: #000;
+            color: #f9f9f9;
+            padding: 20px 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        nav .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #f9f9f9;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 30px;
+        }
+
+        nav ul li a {
+            color: #f9f9f9;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #d9d600;
+        }
+
+        .hero-section {
+            background: url('https://imgflip.com/meme/531112234/Chud-gaye-guru') center/cover no-repeat;
+            color: #f9f9f9;
+            text-align: center;
+            padding: 150px 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            margin: 20px;
+            position: relative; /* Added for overlay */
+        }
+
+        /* Dark overlay for better text visibility */
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+            border-radius: 10px;
+        }
+
+        .hero-section h1,
+        .hero-section p,
+        .hero-section .cta-button {
+            position: relative; /* Ensure text is above the overlay */
+            z-index: 1;
+        }
+
+        .hero-section h1 {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+
+        .hero-section p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            background: #d9d600;
+            color: #000;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+            display: inline-block;
+            font-size: 18px;
+        }
+
+        .cta-button:hover {
+            background: #c4c400;
+        }
+
+        .features-section, .models-section, .contact-section {
+            padding: 60px 20px;
+            text-align: center;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            margin: 20px;
+        }
+
+        .features-section h2, .models-section h2, .contact-section h2 {
+            margin-bottom: 20px;
+            color: #000;
+            font-size: 36px;
+        }
+
+        .feature, .model-card {
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 5px;
+            background-color: #f4f4f4;
+            transition: transform 0.3s ease;
+            text-align: left;
+        }
+
+        .feature:hover, .model-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .feature h3, .model-card h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .feature p, .model-card p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        footer {
+            background: #000;
+            color: #f9f9f9;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-section h1 {
+                font-size: 36px;
+            }
+
+            .hero-section p {
+                font-size: 18px;
+            }
+
+            .cta-button {
+                padding: 10px 20px;
+                font-size: 16px;
+            }
+
+            .features-section h2, .models-section h2, .contact-section h2 {
+                font-size: 28px;
+            }
+
+            .feature, .model-card {
+                margin: 20px 0;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Nadal</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#models">Models</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero-section">
+        <h1>Meet "Nadal" - Your Average CP</h1>
+        <p>Experience the perfect blend of masti and mazak with Nadal, your average CP. Here to make you laugh and kry.</p>
+        <a href="#models" class="cta-button">Explore Now</a>
+    </section>
+
+    <section id="features" class="features-section">
+        <h2>Features</h2>
+        <div class="feature">
+            <h3>Relatable Humor</h3>
+            <p>Nadal brings the most on point and funniest references. From esse lights to choti advance, Nadal has it all.</p>
+        </div>
+        <div class="feature">
+            <h3>Endless Entertainment</h3>
+            <p>With a never-ending supply of masti and mazak, Nadal ensures you're never happy. Laugh your way through the day!</p>
+        </div>
+        <div class="feature">
+            <h3>Community-Driven</h3>
+            <p>NU kehri i love you mai ka chal motti cuz same type shi</p>
+        </div>
+    </section>
+
+    <section id="models" class="models-section">
+        <h2>Khasiyat (intro)</h2>
+        <div class="model-card">
+            <h3>Nadal Classic</h3>
+            <p>The masti mazakiya chai lover baby.</p>
+        </div>
+        <div class="model-card">
+            <h3>Nadal Pro</h3>
+            <p>For the hardcore  lovers, Nadal offers advanced features like "apno pe aye toh rehpte pe rehpte pe rehpte"</p>
+        </div>
+        <div class="model-card">
+            <h3>Nadal Lite</h3>
+            <p>does NOT exist. Nadal is heavy maal </p>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <h2>Contact Us</h2>
+        <form onsubmit="alert('Thank you for your message!'); return false;">
+            <input type="text" placeholder="Your Name" required style="padding: 10px; width: 300px; margin: 10px;">
+            <input type="email" placeholder="Your Email" required style="padding: 10px; width: 300px; margin: 10px;">
+            <textarea placeholder="Your Message" required style="padding: 10px; width: 300px; height: 100px; margin: 10px;"></textarea>
+            <button type="submit" style="background-color: #d9d600; color: #000; padding: 10px 20px; border: none; border-radius: 5px;">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Nadal. All rights reserved.</p>
+    </footer>
+</body>
+</html>
